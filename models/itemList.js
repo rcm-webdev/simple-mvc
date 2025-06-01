@@ -1,7 +1,7 @@
 //building a schema/blueprint to send to the database
 const mongoose = require("mongoose");
 
-const itemList = new mongoose.Schema({
+const itemListSchema = new mongoose.Schema({
     titleInput:{
         type: String,
         required: true,
@@ -18,4 +18,5 @@ const itemList = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("itemList", itemList);
+//export mongoose model with the name of ItemList and the schema of itemListSchema and the collection of items
+module.exports = mongoose.model("ItemList", itemListSchema, "items");
